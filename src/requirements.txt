@@ -1,6 +1,6 @@
 Django >=4.2.8, <5
-Pillow==9.5.0 # See https://github.com/tensorflow/models/issues/11040
-django-tinymce <3.7
+Pillow # ==9.5.0 was previously needed, see https://github.com/tensorflow/models/issues/11040
+django-tinymce
 django-nested-admin
 flup6
 django-fastcgi-server

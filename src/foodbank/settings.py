@@ -152,6 +152,9 @@ TINYMCE_DEFAULT_CONFIG = {
     'height': 400,
 }
 
+# Needed for YouTube embeds, fixes YouTube "Error 153" by allowing cross-origin referrers
+SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
+
 # Fix Estonian date formatting
 FORMAT_MODULE_PATH = 'foodbank.formats'
 

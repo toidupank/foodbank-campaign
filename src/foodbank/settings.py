@@ -166,9 +166,9 @@ EMAIL_BACKEND = 'django_sendmail_backend.backends.EmailBackend'
 ADMIN_URL_PREFIX = 'haldus/'
 
 # Mandatory settings override in production environment
-PRODUCTION_HOSTNAME = 'atria.elkdata.ee'
 IS_PRODUCTION_ENV = False
-if platform.node() == PRODUCTION_HOSTNAME and 'live-osale' in BASE_DIR:
+PRODUCTION_PATH = '/live-osale/foodbank-campaign/src'
+if BASE_DIR.endswith(PRODUCTION_PATH):
     IS_PRODUCTION_ENV = True
     from .settings_live import *
 else:
